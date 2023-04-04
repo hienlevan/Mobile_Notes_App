@@ -1,4 +1,4 @@
-package com.mobile.notesapp;
+package com.mobile.notesapp.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.mobile.notesapp.R;
 
 public class UserLoginActivity extends AppCompatActivity {
 

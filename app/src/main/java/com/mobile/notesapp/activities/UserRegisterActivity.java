@@ -1,4 +1,4 @@
-package com.mobile.notesapp;
+package com.mobile.notesapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.mobile.notesapp.R;
 
 public class UserRegisterActivity extends AppCompatActivity {
 
