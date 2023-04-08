@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="first_color">#333333</color>
+    <color name="blue">#1EADF0</color>
+    <color name="green">#0AFB60</color>
+    <color name="backgound_notes_frame">#eaf1f7</color>
 </resources>

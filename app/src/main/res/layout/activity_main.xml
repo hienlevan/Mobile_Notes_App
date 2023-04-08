@@ -57,30 +57,33 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listNotes"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/layoutSearchNote"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toTopOf="@id/layoutQuickAction"/>
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/btnAddNote"/>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/layoutQuickAction"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/first_color"
+        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent">
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <ImageView
+        android:id="@+id/btnAddNote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/button_add"
         app:layout_constraintTop_toTopOf="@id/layoutQuickAction"
         app:layout_constraintBottom_toTopOf="@id/layoutQuickAction"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="40dp"
+        app:layout_constraintStart_toStartOf="parent"
         android:src="@drawable/ic_add"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
