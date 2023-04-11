@@ -1,11 +1,11 @@
-package com.mobile.notesapp.entities;
+package com.mobile.note.model;
 
 import java.io.Serializable;
 
 public class Note implements Serializable {
     private int noteId;
     private String title;
-    private String noteText;
+    private String content;
 
     public int getNoteId() {
         return noteId;
@@ -23,20 +23,11 @@ public class Note implements Serializable {
         this.title = title;
     }
 
-    public String getNoteText() {
-        return noteText;
+    public String getContent() {
+        return content;
     }
 
-    public void setNoteText(String noteText) {
-        this.noteText = noteText;
-    }
-
-    public Note() {
-    }
-
-    public Note(int noteId, String title, String noteText) {
-        this.noteId = noteId;
-        this.title = title;
-        this.noteText = noteText;
+    public void setContent(String content) {
+        this.content = content;
     }
 }

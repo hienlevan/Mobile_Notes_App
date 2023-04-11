@@ -1,4 +1,4 @@
-package com.mobile.notesapp;
+package com.mobile.note;
 
 import org.junit.Test;
 
