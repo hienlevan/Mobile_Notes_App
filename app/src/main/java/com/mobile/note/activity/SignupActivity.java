@@ -1,21 +1,17 @@
 package com.mobile.note.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.mobile.note.MainActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.mobile.note.R;
 import com.mobile.note.api.ApiService;
 import com.mobile.note.model.User;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
