@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,7 +23,7 @@ public class SignupActivity extends AppCompatActivity {
     private EditText edtUsername;
     private EditText edtPassword;
     private Button btnSignup;
-
+    private TextView textViewLogin;
     private User user;
 
     @Override
@@ -30,10 +31,19 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        edtUsername = findViewById(R.id.edtUsernameSignup);
-        edtPassword = findViewById(R.id.edtPasswordSignup);
+        edtUsername = findViewById(R.id.inputEmail);
+        edtPassword = findViewById(R.id.inputPassword);
         btnSignup = findViewById(R.id.btnSignup);
-        btnSignup = findViewById(R.id.btnSignup);
+        textViewLogin = findViewById(R.id.textViewLogin);
+
+        textViewLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,17 +55,19 @@ public class SignupActivity extends AppCompatActivity {
     }
 
     private void getListUsers(){
-        String strUsername = edtUsername.getText().toString().trim();
+        String strEmail = edtUsername.getText().toString().trim();
         String strPassword = edtPassword.getText().toString().trim();
         user = new User();
-        user.setUsername(strUsername);
+        user.setEmail(strEmail);
         user.setPassword(strPassword);
         ApiService.apiService.createUser(user)
                 .enqueue(new Callback<User>() {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {
                         User user1 = response.body();
-                        Toast.makeText(getApplicationContext(), user1.getUsername() + " " + user1.getPassword(), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getApplicationContext(), user1.getEmail() + " " + user1.getPassword(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), user1.getEmail() + " \n" +
+                                "successful registration", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
                         startActivity(intent);
                     }
