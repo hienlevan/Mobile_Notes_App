@@ -14,6 +14,8 @@ import com.mobile.note.R;
 import com.mobile.note.api.ApiService;
 import com.mobile.note.model.User;
 
+import java.util.UUID;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -43,7 +45,6 @@ public class SignupActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override

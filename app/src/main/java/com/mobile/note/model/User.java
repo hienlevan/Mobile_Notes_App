@@ -5,17 +5,17 @@ import java.util.List;
 
 public class User implements Serializable {
 
-    private int userId;
+    private int id;
     private String email;
     private String password;
     private List<Note> notes;
 
     public int getUserId() {
-        return userId;
+        return id;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserId(String userId) {
+        this.id = id;
     }
 
     public String getEmail() {
@@ -45,7 +45,7 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return "User{" +
-                "userId=" + userId +
+                "userId=" + id +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", notes=" + notes +

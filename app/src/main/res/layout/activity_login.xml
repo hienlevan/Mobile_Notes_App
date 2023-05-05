@@ -16,7 +16,8 @@
         android:layout_marginEnd="70dp"
         android:hint="Email"
         android:textColorHint="#A7A7A7"
-        app:boxStrokeColor="#EAEAEE"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:hintTextColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -42,7 +43,8 @@
         android:hint="Password"
         android:textColorHint="#A7A7A7"
         app:endIconMode="password_toggle"
-        app:boxStrokeColor="#EAEAEE"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:hintTextColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -56,11 +58,13 @@
             android:textStyle="bold"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="271dp"
         android:layout_height="55dp"
         android:layout_marginTop="200dp"
+        android:backgroundTint="@color/colorPrimary"
         android:text="LOGIN"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
@@ -69,7 +73,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.453" />
 
     <TextView
         android:id="@+id/textView4"
@@ -116,19 +121,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.407" />
-
-<!--    <TextView-->
-<!--        android:id="@+id/textView8"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="228dp"-->
-<!--        android:layout_marginTop="6dp"-->
-<!--        android:layout_marginEnd="70dp"-->
-<!--        android:text="Forgot Password?"-->
-<!--        android:textColor="#3BA8BE"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/btnLogin"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />-->
-
 </androidx.constraintlayout.widget.ConstraintLayout>

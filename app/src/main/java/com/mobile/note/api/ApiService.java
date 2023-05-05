@@ -2,6 +2,7 @@ package com.mobile.note.api;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.mobile.note.model.Note;
 import com.mobile.note.model.User;
 
 import java.util.List;
@@ -12,6 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface ApiService {
 
@@ -31,4 +33,13 @@ public interface ApiService {
 
     @POST("user")
     Call<User> createUser(@Body User user);
+
+    @GET("user/{id}")
+    Call<User> getUserById(@Path("id") String id);
+
+    @POST("note/{userId}/note")
+    Call<Note> createNote(@Path("userId") int userId, @Body Note note);
+
+    @GET("note/{userId}/notes")
+    Call<List<Note>> getListOfNotes(@Path("userId") int userId);
 }

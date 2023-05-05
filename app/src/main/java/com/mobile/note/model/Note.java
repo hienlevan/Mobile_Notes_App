@@ -3,16 +3,16 @@ package com.mobile.note.model;
 import java.io.Serializable;
 
 public class Note implements Serializable {
-    private int noteId;
+    private int id;
     private String title;
     private String content;
 
     public int getNoteId() {
-        return noteId;
+        return id;
     }
 
-    public void setNoteId(int noteId) {
-        this.noteId = noteId;
+    public void setNoteId(int Id) {
+        this.id = Id;
     }
 
     public String getTitle() {

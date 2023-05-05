@@ -3,6 +3,8 @@ package com.mobile.note;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -49,11 +51,15 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
 
         private TextView txtNoteTitle;
         private TextView txtNoteContent;
+        private LinearLayout mnote;
+        private ImageView menupopupbutton;
 
         public NoteViewHolder(@NonNull View view) {
             super(view);
             txtNoteTitle = view.findViewById(R.id.txtNoteTitle);
             txtNoteContent = view.findViewById(R.id.txtNoteContent);
+            mnote =view.findViewById(R.id.note);
+            menupopupbutton = view.findViewById(R.id.menupopbutton);
         }
     }
 }
