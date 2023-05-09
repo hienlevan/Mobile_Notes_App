@@ -10,4 +10,12 @@
     <color name="colorPrimary">#3BA8BE</color>
     <color name="colorPrimaryDark">#27707E</color>
     <color name="colorAccent">#CE7672</color>
+
+    <color name="cat_bubble_1">#00BFFF</color>
+    <color name="cat_bubble_2">#FF0000</color>
+    <color name="cat_bubble_3">#00FA9A</color>
+    <color name="cat_bubble_4">#FF8C00</color>
+    <color name="cat_bubble_5">#7CFC00</color>
+    <color name="cat_bubble_6">#FF00FF</color>
+
 </resources>

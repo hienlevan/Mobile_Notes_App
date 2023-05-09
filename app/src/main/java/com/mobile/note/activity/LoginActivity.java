@@ -94,7 +94,7 @@ public class LoginActivity extends AppCompatActivity {
 
             int userId = sharedPreferences.getInt("userId", 0); // Lấy id của user đăng nhập thành công từ SharedPreferences
 
-            Toast.makeText(LoginActivity.this, "Logged in successfully with id: " + userId, Toast.LENGTH_SHORT).show(); // Hiển thị thông báo về id đã lấy được
+            Toast.makeText(LoginActivity.this, "Logged in successfully", Toast.LENGTH_SHORT).show(); // Hiển thị thông báo về id đã lấy được
 
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             Bundle bundle = new Bundle();
